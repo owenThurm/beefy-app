@@ -1,1 +1,1 @@
-export const avaxPools = [];
+export const avalanchePools = [];

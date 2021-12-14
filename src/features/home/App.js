@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import { SnackbarProvider } from 'notistack';
 import { Notifier } from 'features/common';
 import Footer from 'components/Footer/Footer';
-import Pastures from 'components/Pastures/Pastures';
 import { NetworkConnectNotice } from 'components/NetworkConnectNotice/NetworkConnectNotice';
 import appStyle from './jss/appStyle.js';
 import { createWeb3Modal } from '../web3';
@@ -95,7 +94,6 @@ export default function App({ children }) {
               </div>
             </div>
             <Footer />
-            <Pastures />
           </div>
         </SnackbarProvider>
       </ThemeProvider>

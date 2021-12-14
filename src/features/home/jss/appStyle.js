@@ -3,7 +3,7 @@ import { container } from 'assets/jss/material-kit-pro-react.js';
 const appStyle = theme => ({
   '@global': {
     'html,body': {
-      backgroundColor: theme.palette.background.default,
+      background: theme.palette.background.app,
     },
   },
   page: {

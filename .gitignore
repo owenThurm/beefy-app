@@ -29,3 +29,6 @@ pnpm-debug.log*
 # Test
 .nyc_output
 coverage
+
+# Local Netlify folder
+.netlify

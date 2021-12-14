@@ -52,7 +52,7 @@ const HeaderLinks = ({
       <Hidden smDown>
         <ListItem className={classes.listItem}>
           <IconButton onClick={setNightMode} className={classes.iconButton}>
-            {isNightMode ? <WbSunny /> : <NightsStay />}
+            {isNightMode ? <NightsStay /> : <WbSunny />}
           </IconButton>
         </ListItem>
       </Hidden>

@@ -17,6 +17,11 @@ import { getNetworkBuyUrl } from '../../features/helpers/getNetworkData';
 import { Dialog, withStyles } from '@material-ui/core';
 import CustomButton from '../../components/CustomButtons/Button';
 import styles from './styles';
+import styled from 'styled-components';
+
+const Logo = styled.img`
+  height: ${({ isMobile }) => (isMobile ? 35 : 70)}px;
+`;
 
 const useStyles = makeStyles(styles);
 
@@ -47,38 +52,22 @@ const Header = ({ links, isNightMode, setNightMode }) => {
         <Link to={`/${chain}`}>
           <Button className={classes.title}>
             <Hidden xsDown>
-              <img
-                alt="BIFI"
-                src={require(`images/BIFI-logo.svg`)}
-                height={'40px'}
+              <Logo
+                alt="Min.fi"
+                src={require(`images/minlogo-white.png`)}
                 className={classes.logo}
               />
-              beefy.finance
             </Hidden>
             <Hidden smUp>
-              <img
-                alt="BIFI"
-                src={require(`images/BIFI-logo.svg`)}
-                height={'35px'}
+              <Logo
+                alt="Min.fi"
+                src={require(`images/minlogo-white.png`)}
                 className={classes.logo}
+                isMobile
               />
             </Hidden>
           </Button>
         </Link>
-
-        <div className={classes.middleNav}>
-          <Hidden smDown>
-            {renderLink('vote', t('vote'), 'vote-yea', classes)}
-            {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
-            {renderLink('docs', t('docs'), 'book', classes)}
-            {renderLink('blog', t('blog'), 'file-alt', classes)}
-            <InsureLink t={t} classes={classes} />
-          </Hidden>
-          {renderLink('buy', t('buy'), 'dollar-sign', classes)}
-          <Link className={classes.btnBoost} to={`/${chain}/stake`}>
-            <img alt="Boost" src={require('images/stake/boost.svg')} />
-          </Link>
-        </div>
 
         <Hidden smDown implementation="css">
           <div className={classes.collapse}>{links}</div>
@@ -122,7 +111,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
             <InsureLinkSidebar key="insure" t={t} classes={classes} />
             <LinkSidebar name="buy" label={t('buy')} icon="dollar-sign" classes={classes} />
             <IconButton onClick={setNightMode} className={classes.icon}>
-              {isNightMode ? <WbSunny /> : <NightsStay />}
+              {isNightMode ? <NightsStay /> : <WbSunny />}
             </IconButton>
           </div>
         </Drawer>

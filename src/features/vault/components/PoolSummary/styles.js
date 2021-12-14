@@ -3,16 +3,19 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     background: theme.palette.background.primary,
+    borderRadius: theme.overrides.borderRadius,
   },
   detailsPaused: {
     display: 'flex',
     alignItems: 'center',
     background: theme.palette.background.paused,
+    borderRadius: theme.overrides.borderRadius,
   },
   detailsRetired: {
     display: 'flex',
     alignItems: 'center',
     background: theme.palette.background.retired,
+    borderRadius: theme.overrides.borderRadius,
   },
   mobilePadding: {
     paddingTop: '20px',

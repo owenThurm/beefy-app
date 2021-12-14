@@ -6,6 +6,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.primary,
     justifyContent: 'space-between',
     position: 'relative',
+    borderRadius: theme.overrides.borderRadius,
   },
 
   selectorContainer: {
@@ -48,6 +49,7 @@ const styles = theme => ({
       fontWeight: 'bold',
       textTransform: 'capitalize',
     },
+    borderRadius: theme.overrides.borderRadius,
   },
 });
 
